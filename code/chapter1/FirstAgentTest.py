@@ -142,10 +142,10 @@ import re
 
 # --- 1. 配置LLM客户端 ---
 # 请根据您使用的服务，将这里替换成对应的凭证和地址
-API_KEY = "YOUR_API_KEY"
-BASE_URL = "YOUR_BASE_URL"
-MODEL_ID = "YOUR_MODEL_ID"
-os.environ['TAVILY_API_KEY'] = "YOUR_TAVILY_API_KEY"
+API_KEY = "66f9a0c499744d45a2229e96cfae0a16.SdBKgUHQxPLaRaQG"
+BASE_URL = "https://open.bigmodel.cn/api/paas/v4/"
+MODEL_ID = "GLM-4.6V"
+os.environ['TAVILY_API_KEY'] = "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"
 
 llm = OpenAICompatibleClient(
     model=MODEL_ID,
@@ -154,7 +154,7 @@ llm = OpenAICompatibleClient(
 )
 
 # --- 2. 初始化 ---
-user_prompt = "你好，请帮我查询一下今天北京的天气，然后根据天气推荐一个合适的旅游景点。"
+user_prompt = "你好，请帮我查询一下明天广州的天气，然后根据天气推荐一个合适的旅游景点。"
 prompt_history = [f"用户请求: {user_prompt}"]
 
 print(f"用户输入: {user_prompt}\n" + "="*40)
